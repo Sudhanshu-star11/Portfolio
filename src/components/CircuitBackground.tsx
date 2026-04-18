@@ -32,7 +32,7 @@ export default function CircuitBackground() {
 
     function buildLines() {
       lines.length = 0;
-      const { width, height } = canvas;
+      const { width, height } = canvas!;
       const cols = Math.ceil(width / 80);
       const rows = Math.ceil(height / 80);
 
@@ -76,7 +76,7 @@ export default function CircuitBackground() {
     let frame = 0;
 
     const draw = () => {
-      const { width, height } = canvas;
+      const { width, height } = canvas!;
       ctx.clearRect(0, 0, width, height);
 
       // Subtle dark grid dots

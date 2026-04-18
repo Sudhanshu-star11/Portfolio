@@ -23,7 +23,7 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: i * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   }),
 };
 
@@ -31,7 +31,7 @@ const barVariant = {
   hidden: { scaleX: 0 },
   visible: (val: number) => ({
     scaleX: val / 100,
-    transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 },
+    transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.3 },
   }),
 };
 

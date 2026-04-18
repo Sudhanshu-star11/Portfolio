@@ -35,7 +35,7 @@ export default function ConstellationBackground() {
     };
 
     function spawnParticles() {
-      const { width, height } = canvas;
+      const { width, height } = canvas!;
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -53,7 +53,7 @@ export default function ConstellationBackground() {
     window.addEventListener("resize", resize);
 
     const draw = () => {
-      const { width, height } = canvas;
+      const { width, height } = canvas!;
       ctx.clearRect(0, 0, width, height);
 
       // Update + wrap

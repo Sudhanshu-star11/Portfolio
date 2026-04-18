@@ -31,7 +31,7 @@ export default function AuroraBackground() {
     ];
 
     const draw = () => {
-      const { width, height } = canvas;
+      const { width, height } = canvas!;
       ctx.clearRect(0, 0, width, height);
 
       for (const orb of orbs) {
