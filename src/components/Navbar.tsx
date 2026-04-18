@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
 
         <a
-          href="mailto:sudhanshukhandelwal18@gmail.com"
+          href="mailto:sudhanshu@skieglobal.in"
           className="hidden md:block text-sm font-medium bg-neutral-900 text-white px-5 py-2 rounded-full hover:bg-neutral-800 transition-colors"
         >
           Let's Talk
@@ -80,7 +80,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="mailto:sudhanshukhandelwal18@gmail.com"
+            href="mailto:sudhanshu@skieglobal.in"
             className="text-center text-sm font-medium bg-neutral-900 text-white px-5 py-3 rounded-xl hover:bg-neutral-800 transition-colors"
           >
             Let's Talk

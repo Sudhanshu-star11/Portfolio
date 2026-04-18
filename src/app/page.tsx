@@ -26,8 +26,8 @@ export default function Home() {
             I'm always open to discussing testing strategies, automation frameworks, or potential career opportunities.
           </p>
           <div className="flex flex-col md:flex-row gap-6 mb-24">
-            <a href="mailto:sudhanshukhandelwal18@gmail.com" className="bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-100 transition-colors">
-              sudhanshukhandelwal18@gmail.com
+            <a href="mailto:sudhanshu@skieglobal.in" className="bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-100 transition-colors">
+              sudhanshu@skieglobal.in
             </a>
             <a href="tel:+916267780738" className="bg-neutral-800 text-white border border-neutral-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-700 transition-colors">
               +91-6267780738
