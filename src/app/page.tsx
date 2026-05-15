@@ -29,9 +29,6 @@ export default function Home() {
             <a href="mailto:sudhanshu@skieglobal.in" className="bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-100 transition-colors">
               sudhanshu@skieglobal.in
             </a>
-            <a href="tel:+916267780738" className="bg-neutral-800 text-white border border-neutral-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-700 transition-colors">
-              +91-6267780738
-            </a>
           </div>
           <p className="text-sm font-medium text-neutral-500">
             © {new Date().getFullYear()} Sudhanshu Khandelwal. All rights reserved.
