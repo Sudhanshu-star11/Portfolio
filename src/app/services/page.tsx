@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import MediaCarousel from "@/components/animations/MediaCarousel";
 
 export default function ServicesPage() {
   const manualServices = [
@@ -24,6 +25,10 @@ export default function ServicesPage() {
       <div className="absolute top-[40%] right-[10%] w-[400px] h-[400px] bg-sky-200 rounded-full mix-blend-multiply filter blur-[120px] opacity-40 animate-blob animation-delay-2000" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        {/* Animated Video-like Carousel using Uploaded Images */}
+        <MediaCarousel />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

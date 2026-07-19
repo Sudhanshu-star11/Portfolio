@@ -3,13 +3,31 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import BugSimulation from "./animations/BugSimulation";
 
 export default function HeroSTaaS() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-slate-50">
-      {/* Soft gradient background replacing circuit */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      
+      {/* Animated Ken Burns Background Video Simulation */}
+      <motion.div 
+        className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20"
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.15, x: [0, -20, 0], y: [0, -10, 0] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      >
+        <Image 
+          src="/images/isometric-testing.png"
+          alt="Testing Simulation Background"
+          fill
+          className="object-cover object-center filter grayscale blur-[2px]"
+          priority
+        />
+      </motion.div>
+
+      {/* Soft gradient background overlays */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none mix-blend-overlay">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob" />
         <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] bg-purple-200 rounded-full mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-2000" />
         <div className="absolute bottom-[-20%] left-[20%] w-[40%] h-[40%] bg-sky-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-4000" />
@@ -21,7 +39,7 @@ export default function HeroSTaaS() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-700 mb-8 backdrop-blur-sm shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/80 border border-blue-200 text-blue-700 mb-8 backdrop-blur-sm shadow-sm"
           >
             <ShieldCheck size={16} />
             <span className="text-sm font-bold tracking-wide uppercase">Elite Testing as a Service</span>
@@ -44,7 +62,7 @@ export default function HeroSTaaS() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-lg md:text-xl text-slate-600 max-w-2xl mb-10 font-medium"
+            className="text-lg md:text-xl text-slate-700 max-w-2xl mb-10 font-medium bg-white/30 p-2 rounded-xl backdrop-blur-sm"
           >
             Sky-High Standards, Rapid Results, Absolute Confidence. Partner with SKIE Global to deliver flawless software applications and dominate your online presence.
           </motion.p>
@@ -67,7 +85,7 @@ export default function HeroSTaaS() {
             
             <Link
               href="/contact"
-              className="group px-8 py-4 bg-white text-slate-800 border border-slate-200 font-bold rounded-full hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-sm"
+              className="group px-8 py-4 bg-white/80 text-slate-800 border border-slate-200 font-bold rounded-full hover:bg-white transition-colors flex items-center gap-2 shadow-sm backdrop-blur-sm"
             >
               <Zap size={18} className="text-blue-500" />
               Partner with Us
@@ -81,9 +99,18 @@ export default function HeroSTaaS() {
           transition={{ duration: 1, delay: 0.5 }}
           className="flex-1 w-full max-w-lg lg:max-w-none relative"
         >
+          {/* Floating TS Logo Animation to add to the simulated video feel */}
+          <motion.div
+            className="absolute -top-12 -right-12 w-48 h-48 z-0 opacity-80"
+            animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+             <Image src="/images/ts-logo.png" alt="TS Logo" fill className="object-contain" />
+          </motion.div>
+          
           {/* Glass morphic container for the simulation */}
-          <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-[40px] border border-white/60 shadow-[0_20px_60px_rgb(0,0,0,0.05)] transform rotate-3 scale-105" />
-          <div className="relative p-6">
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-3xl rounded-[40px] border border-white/80 shadow-[0_20px_60px_rgb(0,0,0,0.05)] transform rotate-3 scale-105" />
+          <div className="relative p-6 z-10">
             <BugSimulation />
           </div>
         </motion.div>
