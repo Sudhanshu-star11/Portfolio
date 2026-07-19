@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Monitor, Smartphone, Webhook, MonitorCheck, ClipboardCheck, Code2 } from "lucide-react";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -38,7 +39,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-32 bg-black relative border-t border-neutral-900">
+    <section id="services" className="py-32 bg-white relative border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -47,12 +48,15 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6">
-            Elite Testing <span className="text-blue-500">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-display text-slate-900 mb-6">
+            Elite Testing <span className="text-blue-600">Services</span>
           </h2>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
             From early-stage APIs to final user acceptance, we provide comprehensive quality assurance to safeguard your digital ecosystem.
           </p>
+          <Link href="/services" className="inline-block px-6 py-3 bg-slate-100 text-blue-600 font-bold rounded-full hover:bg-slate-200 transition-colors">
+            View All 30+ Services &rarr;
+          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -63,18 +67,18 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:bg-neutral-800/50 transition-colors overflow-hidden"
+              className="group relative p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-300 transition-all overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)]"
             >
               {/* Hover gradient effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               
-              <div className="text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-500 origin-left">
+              <div className="text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-500 origin-left relative z-10">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-200 transition-colors">
+              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-700 transition-colors relative z-10">
                 {service.title}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed relative z-10">
+              <p className="text-slate-600 text-sm leading-relaxed relative z-10 font-medium">
                 {service.description}
               </p>
             </motion.div>

@@ -3,6 +3,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,9 +31,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
-      <body className="antialiased overflow-x-hidden min-h-screen bg-black text-white selection:bg-blue-600 selection:text-white cursor-none">
+      <body className="antialiased overflow-x-hidden min-h-screen bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white cursor-none flex flex-col">
         <CustomCursor />
-        {children}
+        <Navbar />
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer />
         <Analytics />
       </body>
     </html>

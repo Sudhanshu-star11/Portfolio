@@ -39,7 +39,7 @@ export default function Stats() {
       description: "Consistent, reliable QA and software testing partnerships."
     },
     {
-      value: 99,
+      value: 100,
       suffix: "%",
       label: "Seamless Experience",
       description: "Our QA ensures users enjoy a frustration-free experience."
@@ -53,7 +53,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-24 bg-black relative border-t border-neutral-900">
+    <section className="py-24 bg-white relative border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {stats.map((stat, idx) => (
@@ -63,14 +63,14 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="flex flex-col"
+              className="flex flex-col items-center text-center p-6 rounded-3xl bg-slate-50 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-shadow"
             >
-              <div className="text-5xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400 mb-4">
+              <div className="text-5xl font-extrabold font-display text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-indigo-600 mb-4">
                 <Counter to={stat.value} duration={2.5} />
                 {stat.suffix}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{stat.label}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{stat.description}</p>
+              <h3 className="text-xl font-bold text-slate-800 mb-2">{stat.label}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{stat.description}</p>
             </motion.div>
           ))}
         </div>
