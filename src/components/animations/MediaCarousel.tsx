@@ -15,11 +15,6 @@ export default function MediaCarousel() {
       src: "/images/testing-icons.png",
       title: "Full-Spectrum QA Tooling",
       subtitle: "Security, Performance, and Automation"
-    },
-    {
-      src: "/images/o7-services.png",
-      title: "Robust Software Testing",
-      subtitle: "The Key to a Seamless User Experience"
     }
   ];
 
